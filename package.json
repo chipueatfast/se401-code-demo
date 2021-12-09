@@ -1,0 +1,21 @@
+{
+  "name": "flyweight",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start-state": "ts-node ./src-state/index.ts",
+    "start-template": "ts-node ./src-template/index.ts",
+    "start-iterator": "ts-node ./src-iterator/index.ts",
+    "start-observer": "ts-node ./src-observer/index.ts",
+    "start-strategies-func": "ts-node ./src-strategies/functional.ts",
+    "start-strategies-oop": "ts-node ./src-strategies/oop.ts"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.1",
+    "ts-node": "^10.3.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  }
+}
