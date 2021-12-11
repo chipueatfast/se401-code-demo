@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start-adapter": "ts-node ./src-adapter/index.ts",
     "start-flyweight": "ts-node ./src-flyweight/index.ts",
     "start-state": "ts-node ./src-state/index.ts",
     "start-template": "ts-node ./src-template/index.ts",
