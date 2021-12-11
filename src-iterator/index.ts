@@ -1,12 +1,6 @@
-/**
- * Iterator Design Pattern
- *
- * Intent: Lets you traverse elements of a collection without exposing its
- * underlying representation (list, stack, tree, etc.).
- */
+
 
 interface CustomIterator<T> {
-    // Return the current element.
     current(): T;
 
     // Return the current element and move forward to next element.
@@ -27,12 +21,20 @@ interface Aggregator {
     getIterator(): CustomIterator<string>;
 }
 
+
+class AlphabetIterator implements CustomIterator<string> {
+    next() {
+
+    }
+
+}
+
 /**
  * Concrete Iterators implement various traversal algorithms. These classes
  * store the current traversal position at all times.
  */
 
-class AlphabeticalOrderIterator implements CustomIterator<string> {
+class ConcreteIterator implements CustomIterator<string> {
     private collection: WordsCollection;
 
     /**
@@ -43,7 +45,7 @@ class AlphabeticalOrderIterator implements CustomIterator<string> {
     private position: number = 0;
 
     /**
-     * This variable indicates the traversal direction.
+     * traversal direction.
      */
     private reverse: boolean = false;
 
@@ -105,11 +107,11 @@ class WordsCollection implements Aggregator {
     }
 
     public getIterator(): CustomIterator<string> {
-        return new AlphabeticalOrderIterator(this);
+        return new ConcreteIterator(this);
     }
 
     public getReverseIterator(): CustomIterator<string> {
-        return new AlphabeticalOrderIterator(this, true);
+        return new ConcreteIterator(this, true);
     }
 }
 
@@ -119,9 +121,9 @@ class WordsCollection implements Aggregator {
  * program.
  */
 const collection = new WordsCollection();
-collection.addItem('First');
-collection.addItem('Second');
-collection.addItem('Third');
+collection.addItem('b');
+collection.addItem('c');
+collection.addItem('a');
 
 const iterator = collection.getIterator();
 

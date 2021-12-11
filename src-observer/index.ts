@@ -2,10 +2,10 @@
  * The Subject interface declares a set of methods for managing subscribers.
  */
  interface Subject {
-    // Attach an observer to the subject.
+    // Attach an observer 
     attach(observer: Observer): void;
 
-    // Detach an observer from the subject.
+    // Detach an observer 
     detach(observer: Observer): void;
 
     // Notify all observers about an event.
@@ -17,16 +17,11 @@
  * changes.
  */
 class ConcreteSubject implements Subject {
-    /**
-     * @type {number} For the sake of simplicity, the Subject's state, essential
-     * to all subscribers, is stored in this variable.
-     */
+
     public state: number = 0;
 
     /**
-     * @type {Observer[]} List of subscribers. In real life, the list of
-     * subscribers can be stored more comprehensively (categorized by event
-     * type, etc.).
+     * @type {Observer[]} List of subscribers. 
      */
     private observers: Observer[] = [];
 
@@ -63,9 +58,7 @@ class ConcreteSubject implements Subject {
         }
     }
 
-    /**
-     * Usually, the subscription logic is only a fraction of what a Subject can
-     * really do. Subjects commonly hold some important business logic, that
+    /** Subjects commonly hold some important business logic, that
      * triggers a notification method whenever something important is about to
      * happen (or after it).
      */
