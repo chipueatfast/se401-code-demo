@@ -22,13 +22,6 @@ interface Aggregator {
 }
 
 
-class AlphabetIterator implements CustomIterator<string> {
-    next() {
-
-    }
-
-}
-
 /**
  * Concrete Iterators implement various traversal algorithms. These classes
  * store the current traversal position at all times.
