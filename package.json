@@ -12,7 +12,8 @@
     "start-observer": "ts-node ./src-observer/index.ts",
     "start-strategies-func": "ts-node ./src-strategies/functional.ts",
     "start-strategies-oop": "ts-node ./src-strategies/oop.ts",
-    "start-proxy": "ts-node ./src-proxy/index.ts"
+    "start-proxy": "ts-node ./src-proxy/index.ts",
+    "start-abstract-factory": "ts-node ./src-abstract-factory/index.ts"
   },
   "dependencies": {
     "@types/node": "^16.11.1",
